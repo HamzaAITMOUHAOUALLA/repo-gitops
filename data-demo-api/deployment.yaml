@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-demo-api
+  labels:
+    app: data-demo-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-demo-api
+  template:
+    metadata:
+      labels:
+        app: data-demo-api
+    spec:
+      containers:
+      - name: data-demo-api
+        image: data-demo-api:1.0.3
+        ports:
+        - containerPort: 8080
