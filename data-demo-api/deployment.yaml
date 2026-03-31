@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: data-demo-api
-        image: data-demo-api:v1.0.5
+        image: data-demo-api:v1.0.6
         ports:
         - containerPort: 8080
